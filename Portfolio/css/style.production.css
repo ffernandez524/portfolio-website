@@ -1,0 +1,287 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 2 version
+*/
+
+/*
+Colors used
+Primary Color (Light Green): #c1ffbd;
+Secondary Color (Brown): #6c4c33;
+Link-Color (Dark Blue): #003775;
+Text-Color (Black): #000;
+*/
+
+:root {
+    --background-color-primary: #c1ffbd;
+    --background-color-secondary: #6c4c33;
+    --link-color-primary: #003775;
+    --link-color-active: #73360D;
+    --link-color-visited: #6A1C0E;
+    --text-color: #000;
+    --border-color: #000;
+    --font-size-primary: 16px;
+    --line-height-default: 1.6;
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+}
+
+
+* {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+body {
+    /* Sans-serif is fallback if Rubik cannot be loaded */
+    font-family: 'Rubik', sans-serif;
+    font-weight: var(--font-weight-normal);
+    font-size: var(--font-size-primary);
+    line-height: var(--line-height-default);
+    background-color: var(--background-color-primary);
+}
+
+h1, h2, h3 {
+    font-weight: var(--font-weight-bold);
+}
+
+h1 {
+    font-size: 30px;    
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+.navigation-list {
+    list-style-type: none;
+}
+
+.navigation-list li {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.navigation-list__item--active {
+    text-decoration: none;
+}
+
+a {
+    color: var(--link-color-primary);
+}
+
+a:visited {
+    /* When link has been visited */
+    color: var(--link-color-visited);
+}
+
+a:hover, a:focus {
+    /* When hovering mouse over link or link is selected by keyboard */
+    /* Should be placed AFTER a:visited */
+    text-decoration: none;
+}
+
+a:active {
+    /* While link is clicked */
+    /* Should be placed AFTER a:hover */
+    color: var(--link-color-active);
+}
+
+
+
+table, th, td {
+    border: 1px solid var(--border-color);
+    text-align: center;
+    line-height: normal;
+    margin: inherit;
+}
+
+
+
+.page-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    border-bottom: solid;
+}
+
+.page-header__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 200px;
+            flex: 0 1 200px;
+    max-height: 150px;
+}
+
+.page-header__item:last-child {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    text-align: right;
+}
+
+.page-footer {
+    clear: both;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+}
+
+button, 
+.button {
+    /* overwrites browser defaults and resets the border */
+    border: none;
+    /* takes the font from the outer container */
+    font-family: inherit;
+    /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+    background-color: #357b70;
+    color: white;
+    text-decoration: none;
+    /*adds spacing to the button (this will be discussed more in-depth later) */
+    padding: 10px;
+    border-radius: 3px;
+    /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+    border-bottom: 2px solid var(--border-color);
+    /* transition: [transition-property] [transition-duration] [transition-timing-function]-Default is "Ease" [transition-delay]-Default is 0); */
+    -webkit-transition: 0.5s opacity;
+    transition: 0.5s opacity;
+}
+
+.button__secondary {
+    background-color: #e0b354;
+    color: #2b2b2b;
+}
+
+button:hover, 
+button:focus,
+.button:hover,
+.button:focus {
+    /* lets the mouse appear as a hand when hovering over the button */
+    cursor: pointer;
+    /* reduces the opacity of the button to 80% */
+    opacity: 0.8;
+}
+
+.profile {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.profile__portrait {
+    float: left;
+    width: 250px;
+    margin-right: 40px;
+    border-radius: 50%;
+}
+
+.profile__text {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100px;
+            flex: 1 1 100px;
+}
+
+.about {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* SVG Illustration on About Page */
+.palm-beach {
+    height: auto;
+    max-width: 500px;
+
+}
+
+@-webkit-keyframes color-change-sun {
+    0% {
+        fill: #edc655;
+    } 50% {
+        fill: #fcffad;
+    } 100% {
+        fill: #f76414;
+    }
+}
+
+@keyframes color-change-sun {
+    0% {
+        fill: #edc655;
+    } 50% {
+        fill: #fcffad;
+    } 100% {
+        fill: #f76414;
+    }
+}
+
+.sun {
+    /* Applying Color-Change animation:
+    animation: (animation-duration - animation-name - 
+    animation-iteration-count - animation-direction - animation-timing-function) */
+    -webkit-animation: 4s color-change-sun infinite alternate linear;
+            animation: 4s color-change-sun infinite alternate linear;
+}
+
+/* start grid fallback in case browser does not support grids */
+.grid__item {
+    display: inline-block;
+    width: 33%;
+}
+/* end grid fallback */
+
+@supports (display: grid) {
+    .grid {
+        display: -ms-grid;
+        display: grid;
+        /* grid-template-columns: 300px 300px 300px; fractions are better than pixels - they are responsive */
+        -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px;    
+    }
+
+    .grid__item {
+        background-color: lightgray;
+        width: auto;
+        min-height: auto;
+        margin: 0;
+    }
+}
+
+/* All screens below 500px */
+@media all and (max-width: 500px) {
+    .grid {
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+      }
+}
+
+/* Screens between 500 and 750 px */
+@media all and (min-width: 500px) and (max-width: 750px){
+    .grid {
+      -ms-grid-columns: 1fr 20px 1fr;
+      grid-template-columns: 1fr 1fr;
+    }
+}
+/* All screens below 750px */
+@media all and (max-width: 750px) {
+    .grid {
+        grid-gap: 10px;
+    }
+    .grid__item:last-child {
+        grid-column: auto / auto;
+        grid-row: auto / auto;
+    }
+    h1 {
+        font-size: 22px;
+    }
+}
