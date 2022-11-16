@@ -16,17 +16,25 @@ Text-Color (Black): #000;
 :root {
     --background-color-primary: #c1ffbd;
     --background-color-secondary: #6c4c33;
+    --background-color-grid: lightgray;
     --link-color-primary: #003775;
     --link-color-active: #73360D;
     --link-color-visited: #6A1C0E;
-    --text-color: #000;
+    --button-color-primary: #357b70;
+    --button-color-secondary: #e0b354;
+    --text-color-dark: #000;
+    --text-color-light: #fff;
     --border-color: #000;
+    --sun-primary-color: #edc655;
+    --sun-secondary-color: #fcffad;
+    --sun-tertiary-color: #f76414;
+    --max-width-primary: 700px;
+    --max-width-secondary: 500px;
     --font-size-primary: 16px;
     --line-height-default: 1.6;
     --font-weight-normal: 400;
     --font-weight-bold: 700;
 }
-
 
 * {
     -webkit-box-sizing: border-box;
@@ -92,8 +100,6 @@ a:active {
     color: var(--link-color-active);
 }
 
-
-
 table, th, td {
     border: 1px solid var(--border-color);
     text-align: center;
@@ -145,8 +151,8 @@ button,
     /* takes the font from the outer container */
     font-family: inherit;
     /* styles the background color, font color, and text decoration (underline, etc.) of the button */
-    background-color: #357b70;
-    color: white;
+    background-color: var(--button-color-primary);
+    color: var(--text-color-light);
     text-decoration: none;
     /*adds spacing to the button (this will be discussed more in-depth later) */
     padding: 10px;
@@ -159,8 +165,8 @@ button,
 }
 
 .button__secondary {
-    background-color: #e0b354;
-    color: #2b2b2b;
+    background-color: var(--button-color-secondary);
+    color: var(--text-color-dark);
 }
 
 button:hover, 
@@ -174,7 +180,7 @@ button:focus,
 }
 
 .profile {
-    max-width: 700px;
+    max-width: var(--max-width-primary);
     margin: 0 auto;
 }
 
@@ -192,7 +198,7 @@ button:focus,
 }
 
 .about {
-    max-width: 700px;
+    max-width: var(--object-max-width);
     margin: 0 auto;
     text-align: center;
 }
@@ -200,27 +206,27 @@ button:focus,
 /* SVG Illustration on About Page */
 .palm-beach {
     height: auto;
-    max-width: 500px;
+    max-width: var(--max-width-secondary);
 
 }
 
 @-webkit-keyframes color-change-sun {
     0% {
-        fill: #edc655;
+        fill: var(--sun-primary-color);
     } 50% {
-        fill: #fcffad;
+        fill: var(--sun-secondary-color);
     } 100% {
-        fill: #f76414;
+        fill: var(--sun-tertiary-color);
     }
 }
 
 @keyframes color-change-sun {
     0% {
-        fill: #edc655;
+        fill: var(--sun-primary-color);
     } 50% {
-        fill: #fcffad;
+        fill: var(--sun-secondary-color);
     } 100% {
-        fill: #f76414;
+        fill: var(--sun-tertiary-color);
     }
 }
 
@@ -250,7 +256,7 @@ button:focus,
     }
 
     .grid__item {
-        background-color: lightgray;
+        background-color: var(--background-color-grid);
         width: auto;
         min-height: auto;
         margin: 0;
