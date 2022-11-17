@@ -233,6 +233,9 @@ button:focus,
     .grid {
         grid-template-columns: 1fr;
       }
+    img {
+        max-width: 150px;
+    }
 }
 
 /* Screens between 500 and 750 px */
@@ -240,6 +243,7 @@ button:focus,
     .grid {
       grid-template-columns: 1fr 1fr;
     }
+
 }
 /* All screens below 750px */
 @media all and (max-width: 750px) {
