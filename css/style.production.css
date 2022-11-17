@@ -285,7 +285,11 @@ button:focus,
     .grid {
         -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-      }
+    }
+
+    img {
+        max-width: 150px;
+    }
 }
 
 /* Screens between 500 and 750 px */
