@@ -59,7 +59,8 @@ h3 {
 }
 
 .project-img {
-    max-width: 300px;
+    max-width: 500px;
+    max-height: 500px;
     align-self: center;
 }
 
@@ -212,7 +213,8 @@ button:focus,
 
 /* start grid fallback in case browser does not support grids */
 .grid__item {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     width: 33%;
 }
 /* end grid fallback */
