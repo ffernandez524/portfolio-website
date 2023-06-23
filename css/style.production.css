@@ -143,6 +143,12 @@ td {
     text-align: center;
 }
 
+.project-img {
+    max-height: 100px;
+    max-width: 100px;
+    align-self: center;
+}
+
 button {
     /* overwrites browser defaults and resets the border */
     border: none;
