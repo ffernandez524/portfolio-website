@@ -58,7 +58,9 @@ h3 {
     font-size: 18px;
 }
 
-img {
+.project_img {
+    max-height: 100px;
+    max-width: 100px;
     align-self: center;
 }
 
