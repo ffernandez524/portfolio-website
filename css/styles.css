@@ -58,6 +58,10 @@ h3 {
     font-size: 18px;
 }
 
+img {
+    align-self: center;
+}
+
 .navigation-list {
     list-style-type: none;
 }
