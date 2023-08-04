@@ -6,15 +6,15 @@
 # Features
 
 ## BIO
-[AboutMe]https://ffernandez524.github.io/portfolio-website/about.html
+[AboutMe](https://ffernandez524.github.io/portfolio-website/about.html)
 Here you can view some personal information about me!
 
 ## WORK
-[Work]https://ffernandez524.github.io/portfolio-website/work.html
+[Work](https://ffernandez524.github.io/portfolio-website/work.html)
 View projects that I have completed in the past! They may be occasionally updated.
 
 ## CONTACT
-[Contact]https://ffernandez524.github.io/portfolio-website/contact.html
+[Contact](https://ffernandez524.github.io/portfolio-website/contact.html)
 On this page are my contact details.
 
 ## Dependencies
