@@ -181,7 +181,7 @@ button:focus,
     flex: 1 1 100px;
 }
 
-.about {
+.about, .contact {
     max-width: var(--object-max-width);
     margin: 0 auto;
     text-align: center;
